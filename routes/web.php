@@ -23,4 +23,7 @@ Route::group(['prefix'=>'admin','middleware'=>['auth']],function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix'=>'admin','middleware'=>['auth','role:admin']],function () {
 Route::resource('authors','AuthorsController');
+});

@@ -4,15 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Author extends Model
+class author extends Model
 {
     //
     protected $fillable = ['name'];
 
-    public function book()
+    public function author()
 
     {
-    	return $this->hasMany('App\Book');
+    	return $this->hasMany('App\author');
     }
 }
 
